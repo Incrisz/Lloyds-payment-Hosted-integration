@@ -17,6 +17,9 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'secret' => env('SHARED_SECRET'),
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
