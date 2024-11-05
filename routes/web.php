@@ -18,18 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/pay', function () {
-    return view('pay');
-});
-
-Route::get('/test', function () {
-    return view('test');
-});
+// Route::get('/test', function () {
+//     return view('test');
+// });
 
 
 Route::get('/payment', [LloydsCardnetController::class, 'showPaymentForm']);
-Route::post('/payment/process', [LloydsCardnetController::class, 'processPayment']);
 
 
-Route::post('/payment/response', [LloydsCardnetController::class, 'handleResponse']);
+
+// Route::post('/payment/process', [LloydsCardnetController::class, 'processPayment']);
+// Route::post('/payment/response', [LloydsCardnetController::class, 'handleResponse']);
