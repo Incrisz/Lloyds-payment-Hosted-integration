@@ -40,7 +40,7 @@ class LloydsCardnetController extends Controller
     {
         // Validate the request data if necessary
         
-        return redirect()->to('https://test.ipg-online.com/connect/gateway/processing')
-            ->withInput($request->except('chargetotal')); // Exclude sensitive data from session
-    }
+    //     return redirect()->to('https://test.ipg-online.com/connect/gateway/processing')
+    //         ->withInput($request->except('chargetotal')); // Exclude sensitive data from session
+    // }
 }
