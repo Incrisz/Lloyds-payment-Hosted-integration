@@ -28,8 +28,8 @@ class LloydsController extends Controller
         $chargetotal = "13.00";  // This can be dynamic, for example, based on the cart total
         $currency = "826";       // GBP
         $txndatetime = gmdate("Y:m:d-H:i:s");
-        $responseSuccessURL = route('payment.success');  // Dynamic route for success
-        $responseFailURL = route('payment.failure');    // Dynamic route for failure
+        $responseSuccessURL = "https://lloyds.mebany.com/success.php";  // Dynamic route for success
+        $responseFailURL = "https://lloyds.mebany.com/failure.php";    // Dynamic route for failure
         $checkoutoption = "combinedpage";  // Redirect to the Lloyds page for card entry
         $hash_algorithm = "HMACSHA256";    // Ensure this is set
     
