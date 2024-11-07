@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Payment\LloydsCardnetController;
+use App\Http\Controllers\Payment\LloydsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,14 +18,28 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/test', function () {
-//     return view('test');
-// });
+Route::get('/test', function () {
+    return view('test');
+});
 
 
-Route::get('/payment', [LloydsCardnetController::class, 'showPaymentForm']);
+// Route::get('/payment', [LloydsCardnetController::class, 'showPaymentForm']);
 
 
 
 // Route::post('/payment/process', [LloydsCardnetController::class, 'processPayment']);
 // Route::post('/payment/response', [LloydsCardnetController::class, 'handleResponse']);
+
+
+
+
+
+
+Route::get('/payment', [LloydsController::class, 'showForm']);
+Route::post('/payment', [LloydsController::class, 'processPayment'])->name('payment.process');
+Route::get('/payment/success', function () {
+    return "Payment Successful!";
+})->name('payment.success');
+Route::get('/payment/failure', function () {
+    return "Payment Failed!";
+})->name('payment.failure');
