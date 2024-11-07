@@ -64,7 +64,7 @@ class LloydsController extends Controller
         // Check if the request is successful and the response is ready
         if ($response->successful()) {
             // If successful, redirect the user to the actual payment gateway page (card details entry)
-            return redirect()->to('https://test.ipg-online.com/connect/gateway/processing')->with([
+            return redirect()->to('https://lloyds.mebany.com/hosted/public/process.php')->with([
                 'data' => $data  // Pass the data to be used in the redirected page
             ]);
         } else {
