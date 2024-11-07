@@ -59,7 +59,7 @@ class LloydsController extends Controller
 
         // Normally we would need to submit the data to Lloyds via a form submission
         // But instead, we will prepare the POST data and pass it to the Lloyds gateway
-        $response = Http::asForm()->post('https://test.ipg-online.com/connect/gateway/processing', $data);
+        $response = Http::asForm()->post('https://lloyds.mebany.com/hosted/public/process.php', $data);
 
         // Check if the request is successful and the response is ready
         if ($response->successful()) {
