@@ -42,11 +42,11 @@ Route::get('/payment', [LloydsController::class, 'showForm']);
 Route::post('/payment', [LloydsController::class, 'processPayment'])->name('payment.process');
 
 // Success page route (GET request)
-Route::get('/payment/success', function () {
+Route::any('/payment/success', function () {
     return "Payment Successful!";
 })->name('payment.success');
 
 // Failure page route (GET request)
-Route::get('/payment/failure', function () {
+Route::any('/payment/failure', function () {
     return "Payment Failed!";
 })->name('payment.failure');
