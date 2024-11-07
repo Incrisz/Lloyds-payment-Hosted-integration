@@ -38,7 +38,7 @@ echo "Generated Hash: " . $hashOutput . "<br>";
 ?>
 
 
-    <form method="post" action="https://test.ipg-online.com/connect/gateway/processing">
+    <form method="post" action="https://lloyds.mebany.com/hosted/public/process.php">
         <p><label for="storename">Store ID:</label>
            <input type="text" name="storename" value="<?php echo $storeId; ?>" /></p>
         <p><label for="timezone">Timezone:</label>
