@@ -6,6 +6,7 @@
 <body>
     <h1>Order Form</h1>
     <?php
+    
 // Fields based on your provided details
 $storeId = "2220541904";
 $timezone = "Europe/London";
@@ -13,8 +14,8 @@ $txntype = "sale";
 $chargetotal = "13.00";
 $currency = "826";
 $txndatetime = gmdate("Y:m:d-H:i:s");
-$responseSuccessURL = "https://lloyds.mebany.com/success.php";
-$responseFailURL = "https://lloyds.mebany.com/failure.php";
+$responseSuccessURL = "https://example.com/success.php";
+$responseFailURL = "https://example.com/failure.php";
 $checkoutoption = "combinedpage";
 $hash_algorithm = "HMACSHA256"; // Ensure this is set
 
@@ -38,7 +39,7 @@ echo "Generated Hash: " . $hashOutput . "<br>";
 ?>
 
 
-    <form method="post" action="https://lloyds.mebany.com/hosted/public/process.php">
+    <form method="post" action="https://test.ipg-online.com/connect/gateway/processing">
         <p><label for="storename">Store ID:</label>
            <input type="text" name="storename" value="<?php echo $storeId; ?>" /></p>
         <p><label for="timezone">Timezone:</label>
