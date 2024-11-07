@@ -35,11 +35,18 @@ Route::get('/test', function () {
 
 
 
+// Display form for payment selection
 Route::get('/payment', [LloydsController::class, 'showForm']);
+
+// Process payment request (POST method to handle the form submission)
 Route::post('/payment', [LloydsController::class, 'processPayment'])->name('payment.process');
+
+// Success page route (GET request)
 Route::get('/payment/success', function () {
     return "Payment Successful!";
 })->name('payment.success');
+
+// Failure page route (GET request)
 Route::get('/payment/failure', function () {
     return "Payment Failed!";
 })->name('payment.failure');
