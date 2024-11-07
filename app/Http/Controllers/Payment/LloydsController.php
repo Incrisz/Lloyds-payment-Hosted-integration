@@ -44,7 +44,7 @@ class LloydsController extends Controller
     
         // Prepare the data to send to the Lloyds endpoint
         $data = [
-            'storeId' => $storeId,
+            'storename' => $storeId,
             'timezone' => $timezone,
             'txntype' => $txntype,
             'chargetotal' => $chargetotal,
